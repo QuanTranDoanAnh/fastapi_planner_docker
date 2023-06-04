@@ -26,7 +26,7 @@ async def sign_user_up(user: User) -> dict:
     user.password = hashed_password
     await user_database.save(user)
     return {
-        "message": "User succesfully registered"
+        "message": "User successfully registered"
     }
 
 @user_router.post("/signin", response_model=TokenResponse)
